@@ -11,4 +11,6 @@ console.log(null > 0 )
 console.log(null >= 0 )
 console.log(null == 0 )
 
+
+//  strict comparison it checks both value n data type
 console.log( "2" === 2)
