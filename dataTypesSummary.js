@@ -22,3 +22,28 @@ let MyFunc = function(){
 }
 
 console.log(typeof MyAry)
+
+
+// stack (primitive) , heap ( non-primitive)
+
+let UserName= "zammar ahmar"
+let anotherName = UserName
+anotherName = "muhammad zammar"
+console.log(anotherName)
+console.log(UserName)
+//  In stack primitive dataType data is given in copies so the original data cant be changed
+
+
+let myInfo ={
+    email : 'zammar@mail.com',
+    password : '12345'
+}
+let Info2 = myInfo
+Info2.email="ali@mail.com";
+    
+
+console.log(Info2.email)
+console.log(myInfo.email)
+
+// In heap ( non-primitive) u the refernce of the data so alteration affects the og data type
+
