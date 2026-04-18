@@ -8,5 +8,6 @@ acountCity = "islamabad"
 acountEmail ="zammr@mil.com"
 acountPassword = "54321"
 acountCity = "adra"
+//   prefer not  to use var because of issue of block scope n functional scope.
 
 console.table(acountCity,accountId,accountPassword,acountEmail)
