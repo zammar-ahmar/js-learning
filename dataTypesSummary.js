@@ -1,4 +1,4 @@
-// primitive dataTypes
+// primitive dataTypes are call by value
 //  7 types : String Number Boolean null undefined Symbol BigInt
 
 let id = Symbol('123')
@@ -16,9 +16,9 @@ let Myobj = {
     Name : "zammmar",
     age : 20 ,
 }
-
+ 
 let MyFunc = function(){
-    comsole.log("JS WORLD");
+    comsole.log("JS WORLD");      
 }
 
 console.log(typeof MyAry)
