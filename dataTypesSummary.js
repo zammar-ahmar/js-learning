@@ -45,5 +45,5 @@ Info2.email="ali@mail.com";
 console.log(Info2.email)
 console.log(myInfo.email)
 
-// In heap ( non-primitive) u the refernce of the data so alteration affects the og data type
+// In heap ( non-primitive) u get the refernce of the data so alteration affects the og data type
 
