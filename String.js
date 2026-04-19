@@ -9,11 +9,14 @@ console.log(`hello my Name is ${name.toUpperCase()} and  im ${age+1} years old`)
 
 
 
-let sss = "  zammar  "
+let sss = "zammar"
 console.log(sss);
 console.log(sss.trim())
+console.log(sss.indexOf('m'))
 
  const url = "www.zammar20%domain.com"
   console.log(url.replace("20%" ,"__"))
   console.log(url.includes("zammar"))
   console.log(url.includes("ali"))
+
+  
