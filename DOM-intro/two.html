@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>creating DOM elements</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
 </head>
-<body>
-    
+<body class="bg-black">
+    <h1>creating elements in the DOM</h1>
 </body>
-
 
 <script>
     const div = document.createElement('div');
     console.log(div);
+    div.innerText='creating elements in  DOM';
+  div.setAttribute('title','this is a div element');
+  div.style.color = 'green';
+  div.style.padding = '10px';
+    div.className= "div-class"
+    div.id =Math.floor(Math.random()*10 +1)
+
+    document.body.appendChild(div);
+
     
 </script>
 </html>
