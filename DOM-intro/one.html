@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM lessons</title>
+     <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
 </head>
-<body>
-    
+<body class="bg-black">
+     <!-- <div >
+       <h1 id="title" class="heading">DOM learning with me</h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, numquam!</p>
+     <input type="password"  id="password" placeholder="Enter your password" name=""    >
+     <ul>
+        <li class="z">a</li>
+        <li class="z" >b</li>
+        <li class="z" >c</li>
+        <li class="z    " >d</li>
+     </ul>
+    </div> -->
+       <div class="parent">
+        <div class="day">mon</div>
+        <div class="day">tue</div>
+        <div class="day">wed</div>
+        <div class="day">thu</div>
+        <div class="day">fri</div>
+        <div class="day">sat</div>
+        <div class="day">sun</div>
+       </div>
+
+
+
 </body>
+
+ <script>
+const week = document.querySelector('.parent')
+console.log(week);
+console.log(week.children);
+  
+for (let z = 0; z < week.children.length; z++) {
+    const element = week.children[z].innerHTML;
+    console.log(element);
+}
+  week.children[0].style.color = 'red'
+  week.children[6].style.color = 'blue'
+  console.log(week.firstElementChild);
+  console.log(week.lastElementChild);
+  
+
+ </script>
 </html>
