@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to edit n remove elements in the DOM</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <h1>editing and removing elements in the DOM</h1>
+
+    <ul class="lang">
+        <li>javascript</li>
+    </ul>
+
+    
+</body>
+<script>
+    function  addlang(langName){
+        const lg = document.createElement('li');
+        lg.innerHTML=`${langName}`
+        document.querySelector('.lang').appendChild(lg);        
+    }
+    addlang('python');
+    addlang('java');
+
+     function removelang(langName){
+        const lg = document.querySelectorAll('.lang li');
+        for(let i=0; i<lg.length; i++){
+            if(lg[i].innerHTML === langName){
+                lg[i].remove();
+            }
+        }    }
+    // removelang('javascript');
+   
+
+
+
+    
+
+    function optLang(langName){
+        const lg = document.createElement("li")
+        lg.appendChild(document.createTextNode(langName));
+        document.querySelector('.lang').appendChild(lg);
+    }
+    optLang("C++")  
+
+
+
+ const langRemoval = document.querySelector('li:last-child');
+    langRemoval.remove();
+
+
+
+
+
+
+
+</script>
+</html>
