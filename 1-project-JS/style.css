@@ -1,0 +1,45 @@
+.button{
+   align-content: center;
+   align-items: center;
+   align-self: center;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 100px;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+#black{
+    background-color: black;
+}
+#purple{
+    background-color: purple;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+#grey{
+    background-color: grey;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(91, 200, 243);
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(50, 151, 240);
+}
