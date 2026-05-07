@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events learning JS</title>
+</head>
+<body style="background-color: black;">
+    <h1 >Events Learning</h1>
+
+     <ul id="image">
+        <li> <img width="200px" src="paul-kansonkho-9xjhqvdmi4c-unsplash.jpg" alt="" id="car1"> </li>
+        <li> <img width="200px"src="paul-kansonkho-9xjhqvdmi4c-unsplash.jpg" alt="" id="car2"> </li>
+        <li> <img width="200px" src="paul-kansonkho-9xjhqvdmi4c-unsplash.jpg" alt="" id="car3"> </li>
+        <li><a href="https://www.youtube.com/" id="youtube">YOUTUBE</a></li>
+    </ul>
+</body>
+<script>
+// const cars=document.getElementById('car1')
+
+// cars.addEventListener("click",function(z){
+//     alert("you clicked the image")
+//     console.log(z);
+// }) 
+
+const tube = document.getElementById('youtube')
+tube.addEventListener("dblclick",function(z){
+    z.preventDefault()
+    alert("you clicked the link")
+    console.log(`clicked ${z.target.innerText}`);
+
+})
+document.getElementById("image").addEventListener("click",(z)=>{
+    let remove = z.target.parentNode
+    remove.remove()
+    console.log(z.target.parentNode)
+})
+</script>
+</html>
