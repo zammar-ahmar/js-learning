@@ -1,0 +1,26 @@
+.body{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #302e2e;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+.container {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+      width: 250px;
+     height: 250px;
+     border: 5px solid rgb(26, 3, 3);
+     border-radius: 50%
+}
