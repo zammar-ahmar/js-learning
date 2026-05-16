@@ -14,7 +14,7 @@ let timer = null;
 //////////////////////////////////////////////////////////////////////////
 startBtn.addEventListener("click", () => {
 
-  if (timer !== null) {
+  if (timer) {
     clearInterval(timer);
   }
 
@@ -58,9 +58,12 @@ function updateTime() {
     hours++;
   }
 
-  let h = hours < 10 ? "0" + hours : hours;
-  let m = minutes < 10 ? "0" + minutes : minutes;
-  let s = seconds < 10 ? "0" + seconds : seconds;
-  let milli = ms < 10 ? "0" + ms : ms;
+  //we need to show the time with two digits, so we will add a "0" before the number if it is less than 10
+  let h = hours < 10 ? ("0" + hours) : hours;
+  let m = minutes < 10 ?( "0" + minutes) : minutes;
+  let s = seconds < 10 ? ("0" + seconds) : seconds;
+  let milli = ms < 10 ? ("0" + ms) : ms;
+  //we need to show the time with two digits, so we will add a "0" before the number if it is less than 10
 
-  display.innerText = `${h}:${m}:${s}:${milli}`;}
+  display.innerText = `${h}:${m}:${s}:${milli}`;
+}

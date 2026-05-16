@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object oriented programming</title>
+</head>
+<body>
+    <h1>Object Oriented Programming</h1>
+    <p>This is a simple example of object-oriented programming in JavaScript.</p>   
+    <p>part of OOP in JS</p>
+<ul>
+    <li>constructor function</li>
+    <li>prototypes</li>
+    <li>classes</li>
+    <li>instances(new,this)</li>
+</ul>
+
+
+    <p>Four pillars of OOP</p>
+
+    <ul>
+        <li>Encapsulation</li>
+        <li>Abstraction</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+    
+</body>
+<script>
+        // Define a class
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+            }
+        }
+
+        // Create an instance of the class
+        const person1 = new Person('Alice', 30);
+        person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+
+
+function User(username, age, email) {
+    this.username = username;
+    this.age = age;
+    this.email = email;
+    // return this;
+}
+const user1 = new User('john_doe', 25, 'zammar@gmail.com');
+const user2 = new User('jane_smith', 30, 'jane@gmail.com');
+console.log(user1.username)
+
+    </script>
+</html>

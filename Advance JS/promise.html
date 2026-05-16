@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise JS</title>
+</head>
+<body>
+    <h1> Promise in JavaScript</h1>
+    <p> A Promise is an object that represents the eventual completion (or failure) of an 
+        asynchronous operation and its resulting value. It allows you to write asynchronous <br>
+         code in a more synchronous and readable manner.</p>
+    <p> A Promise can be in one of three states:</p>
+    <ul>
+        <li><strong>Pending:</strong> The initial state, neither fulfilled nor rejected.</li>
+        <li><strong>Fulfilled:</strong> The operation completed successfully.</li>
+        <li><strong>Rejected:</strong> The operation failed.</li>
+    </ul>
+</body>
+
+<script>
+    // Example of creating a Promise
+    const myPromise = new Promise((resolve, reject) => {
+        const success = true; // Simulating an asynchronous operation
+        if (success) {
+            resolve('Operation successful!');
+        } else {
+            reject('Operation failed.');
+        }
+    });
+
+    // Consuming the Promise
+    myPromise
+        .then(result => console.log(result)) // Handle success
+        .catch(error => console.error(error)); // Handle error
+    
+</script>
+</html>
