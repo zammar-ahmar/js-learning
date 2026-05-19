@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype JS </title>
+</head>
+<body>
+    <h1>prototype JS  </h1>
+    <p>Understanding JavaScript prototypes</p>
+    <p>In JavaScript, every object has a hidden property called [[Prototype]], which is 
+        a reference to another object. This prototype object can have its own properties <br>
+         and methods, and it serves as a fallback for property lookups. When you try to 
+         access a property on an object, JavaScript first checks if the property exists <br>
+         on the object itself. If it doesn't find it there, it looks up the prototype 
+         chain until it finds the property or reaches the end of the chain (null).</p>
+    
+</body>
+<script>
+    // Example of prototype in JavaScript
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Adding a method to the prototype
+    Person.prototype.greet = function() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    };
+
+    const person1 = new Person('Alice', 30);
+    const person2 = new Person('Bob', 25);
+
+    person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+    person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
+    </script>
+</html>
