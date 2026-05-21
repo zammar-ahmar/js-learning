@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes JS</title>
+</head>
+<body>
+    <h1>classes & static JS</h1>
+    <p>Understanding JavaScript classes & static methods</p>
+           <h2>classes</h2>
+    <p>in JS A class is a template or blueprint used to create objects.
+         It defines the properties and behaviors that objects will have.</p>
+           <h2>static</h2>
+     <p>Static methods are methods that belong to the class itself, rather than to any specific 
+        instance of the class. They are called on the class directly, without creating an 
+        instance of the class.</p>
+
+    
+</body>
+<script>
+    // Example of classes in JavaScript
+    class Person {
+        constructor(name, email, age) {
+            this.name = name;
+            this.email = email;
+            this.age = age;
+        
+        }
+
+        greet() {
+            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.
+           My email is ${this.email}.`);
+        }
+    }
+
+    const person1 = new Person('Alice', 'alice@example.com', 30);
+    const person2 = new Person('Bob', 'bob@example.com', 25);
+
+    person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.My email is alice@example.com.
+    person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.My email is bob@example.com.
+
+
+    // example for static method in JavaScript
+    class MathUtils {
+        static add(a, b) {
+            return a + b;
+        }
+
+        static subtract(a, b) {
+            return a - b;
+        }
+    }
+
+    // Using static methods
+    console.log(MathUtils.add(5, 3)); // Output: 8
+    console.log(MathUtils.subtract(10, 4)); // Output: 6
+</script>
+</html>

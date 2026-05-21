@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getter and setter</title>
+</head>
+<body>
+    <H1>getter and setter</H1>
+    <p>Understanding JavaScript getter and setter</p>
+    <h2>getter and setter</h2>
+    <p>In JavaScript, getters and setters are special methods that allow you to define how to 
+        access and modify the properties of an object.  They provide a way to control the behavior
+         of property access and assignment.</p>
+</body>
+<script>
+    
+    class person {
+        constructor(name, age) {
+            this._name = name; // Using underscore to indicate private property
+            this._age = age;
+        }
+
+        // Getter for name
+        get name() {
+            return this._name;
+        }
+
+        // Setter for name
+        set name(newName) {
+            this._name == newName;
+        }
+
+        // Getter for age
+        get age() {
+            return this._age;
+        }
+
+        // Setter for age
+        set age(newAge) {
+            if (newAge > 0) {
+                this._age == newAge;
+            } else {
+                console.log("Age must be a positive number.");
+            }
+        }
+        }
+
+        const   newName = new person('Alice', 30);
+    console.log(newName.name); // Output: Alice
+    console.log(newName.age);  // Output: 30
+</script>
+</html>

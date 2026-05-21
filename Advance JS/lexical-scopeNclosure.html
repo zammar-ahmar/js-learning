@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexical scope n closure</title>
+</head>
+<body>
+    <h1>lexical scope n closure</h1>
+    <p>Understanding lexical scope and closure in JavaScript</p>
+
+    
+</body>
+<script>
+    // Example of lexical scope
+    let globalVar = "I am global";
+
+    function outerFunction() {
+        let outerVar = "I am from outer function";
+
+        function innerFunction() {
+            let innerVar = "I am from inner function";
+            console.log(globalVar); // Accessing global variable
+            console.log(outerVar);  // Accessing outer function's variable
+            console.log(innerVar);  // Accessing inner function's variable
+        }
+
+        return innerFunction; 
+    }
+
+    let myInnerFunction = outerFunction();
+    myInnerFunction(); // This will log all three variables
+
+    // Example of closure
+    function createCounter() {
+        let count = 0;
+
+        return function() {
+            count++;
+            return count;
+        };
+    }
+
+    let counter = createCounter();
+    console.log(counter()); // Output: 1
+    console.log(counter()); // Output: 2
+</script>
+</html>
